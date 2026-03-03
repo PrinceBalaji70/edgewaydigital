@@ -1,0 +1,103 @@
+<!-- images/contact-illustration.svg
+     Abstract tech: globe with connection nodes & signal rings -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" fill="none">
+  <defs>
+    <radialGradient id="globeG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#1a1033"/>
+      <stop offset="100%" stop-color="#0a0d14"/>
+    </radialGradient>
+    <linearGradient id="ringG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6c63ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="glow4">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="globeClip">
+      <circle cx="180" cy="150" r="90"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer signal rings -->
+  <circle cx="180" cy="150" r="135" stroke="url(#ringG)" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="180" cy="150" r="115" stroke="url(#ringG)" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="180" cy="150" r="95"  stroke="url(#ringG)" stroke-width="1"   opacity="0.4"/>
+
+  <!-- Globe body -->
+  <circle cx="180" cy="150" r="90" fill="url(#globeG)" stroke="#1e2a3a" stroke-width="1.5"/>
+
+  <!-- Globe grid lines (latitude/longitude) clipped -->
+  <g clip-path="url(#globeClip)" stroke="#1e2a3a" stroke-width="0.8" opacity="0.7">
+    <!-- Latitude lines -->
+    <ellipse cx="180" cy="150" rx="90" ry="20"/>
+    <ellipse cx="180" cy="150" rx="90" ry="50"/>
+    <ellipse cx="180" cy="150" rx="90" ry="75"/>
+    <!-- Longitude lines -->
+    <ellipse cx="180" cy="150" rx="20" ry="90"/>
+    <ellipse cx="180" cy="150" rx="50" ry="90"/>
+    <ellipse cx="180" cy="150" rx="75" ry="90"/>
+  </g>
+
+  <!-- Globe equator highlight -->
+  <ellipse cx="180" cy="150" rx="90" ry="20" stroke="#6c63ff" stroke-width="0.8" opacity="0.3" clip-path="url(#globeClip)"/>
+
+  <!-- Connection nodes on globe surface -->
+  <g filter="url(#glow4)">
+    <circle cx="140" cy="120" r="5" fill="#6c63ff"/>
+    <circle cx="220" cy="135" r="5" fill="#00d4aa"/>
+    <circle cx="175" cy="180" r="4" fill="#6c63ff" opacity="0.9"/>
+    <circle cx="245" cy="165" r="4" fill="#ff9f43"/>
+    <circle cx="130" cy="168" r="4" fill="#00d4aa" opacity="0.8"/>
+    <circle cx="195" cy="105" r="3" fill="#6c63ff" opacity="0.7"/>
+  </g>
+
+  <!-- Connections between nodes -->
+  <g stroke="url(#ringG)" stroke-width="1" opacity="0.5">
+    <line x1="140" y1="120" x2="220" y2="135"/>
+    <line x1="220" y1="135" x2="245" y2="165"/>
+    <line x1="140" y1="120" x2="130" y2="168"/>
+    <line x1="130" y1="168" x2="175" y2="180"/>
+    <line x1="175" y1="180" x2="245" y2="165"/>
+    <line x1="195" y1="105" x2="220" y2="135"/>
+  </g>
+
+  <!-- Outer connection nodes with lines to globe -->
+  <g filter="url(#glow4)">
+    <!-- Node top-left -->
+    <circle cx="50"  cy="60"  r="7" fill="#6c63ff"/>
+    <circle cx="50"  cy="60"  r="14" stroke="#6c63ff" stroke-width="0.8" opacity="0.3" fill="none"/>
+    <line   x1="57"  y1="66"  x2="140" y2="120" stroke="#6c63ff" stroke-width="1" opacity="0.4"/>
+
+    <!-- Node top-right -->
+    <circle cx="310" cy="70"  r="7" fill="#00d4aa"/>
+    <circle cx="310" cy="70"  r="14" stroke="#00d4aa" stroke-width="0.8" opacity="0.3" fill="none"/>
+    <line   x1="303" y1="76"  x2="220" y2="135" stroke="#00d4aa" stroke-width="1" opacity="0.4"/>
+
+    <!-- Node bottom-right -->
+    <circle cx="320" cy="240" r="7" fill="#ff9f43"/>
+    <circle cx="320" cy="240" r="14" stroke="#ff9f43" stroke-width="0.8" opacity="0.3" fill="none"/>
+    <line   x1="312" y1="234" x2="245" y2="165" stroke="#ff9f43" stroke-width="1" opacity="0.4"/>
+
+    <!-- Node bottom-left -->
+    <circle cx="45"  cy="230" r="7" fill="#00d4aa"/>
+    <circle cx="45"  cy="230" r="14" stroke="#00d4aa" stroke-width="0.8" opacity="0.3" fill="none"/>
+    <line   x1="53"  y1="224" x2="130" y2="168" stroke="#00d4aa" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Location pin on globe -->
+  <g filter="url(#glow4)">
+    <circle cx="200" cy="138" r="5" fill="#ff9f43"/>
+    <path d="M200,123 C196,123 192,127 192,131 C192,136 200,145 200,145 C200,145 208,136 208,131 C208,127 204,123 200,123 Z"
+          fill="#ff9f43" opacity="0.85"/>
+    <circle cx="200" cy="131" r="3" fill="#fff" opacity="0.7"/>
+  </g>
+
+  <!-- Label text -->
+  <g font-family="'Courier New', monospace" font-size="8" opacity="0.6">
+    <text x="22" y="58"  fill="#6c63ff">APAC</text>
+    <text x="286" y="68"  fill="#00d4aa">EMEA</text>
+    <text x="296" y="252" fill="#ff9f43">AMER</text>
+    <text x="18" y="248"  fill="#00d4aa">MENA</text>
+  </g>
+</svg>

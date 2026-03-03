@@ -1,0 +1,90 @@
+<!-- images/hero-illustration.svg
+     Abstract tech/dark: circuit board + data nodes network -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <radialGradient id="gHero" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="#6c63ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0a0d14"  stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6c63ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="400" cy="300" rx="380" ry="280" fill="url(#gHero)"/>
+
+  <!-- Circuit grid lines -->
+  <g stroke="#1e2a3a" stroke-width="1" opacity="0.6">
+    <line x1="100" y1="0"   x2="100" y2="600"/>
+    <line x1="200" y1="0"   x2="200" y2="600"/>
+    <line x1="300" y1="0"   x2="300" y2="600"/>
+    <line x1="400" y1="0"   x2="400" y2="600"/>
+    <line x1="500" y1="0"   x2="500" y2="600"/>
+    <line x1="600" y1="0"   x2="600" y2="600"/>
+    <line x1="700" y1="0"   x2="700" y2="600"/>
+    <line x1="0"   y1="100" x2="800" y2="100"/>
+    <line x1="0"   y1="200" x2="800" y2="200"/>
+    <line x1="0"   y1="300" x2="800" y2="300"/>
+    <line x1="0"   y1="400" x2="800" y2="400"/>
+    <line x1="0"   y1="500" x2="800" y2="500"/>
+  </g>
+
+  <!-- Data flow paths -->
+  <g stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.5" fill="none">
+    <polyline points="80,300 150,300 150,180 320,180 320,240 460,240"/>
+    <polyline points="460,240 540,240 540,150 680,150 680,300 740,300"/>
+    <polyline points="200,500 200,380 350,380 350,420 500,420 500,360 650,360"/>
+    <polyline points="80,420 130,420 130,340 260,340 260,300"/>
+    <polyline points="620,480 620,420 720,420 720,360"/>
+  </g>
+
+  <!-- Nodes / data points -->
+  <g filter="url(#glow)">
+    <!-- Primary accent nodes -->
+    <circle cx="460" cy="240" r="8"  fill="#6c63ff"/>
+    <circle cx="320" cy="180" r="6"  fill="#6c63ff" opacity="0.8"/>
+    <circle cx="680" cy="300" r="7"  fill="#00d4aa"/>
+    <circle cx="350" cy="380" r="6"  fill="#00d4aa" opacity="0.8"/>
+    <circle cx="500" cy="360" r="5"  fill="#6c63ff" opacity="0.7"/>
+    <circle cx="260" cy="300" r="5"  fill="#00d4aa" opacity="0.7"/>
+    <circle cx="150" cy="300" r="5"  fill="#6c63ff" opacity="0.6"/>
+    <circle cx="540" cy="150" r="5"  fill="#ff9f43" opacity="0.7"/>
+    <circle cx="130" cy="340" r="4"  fill="#00d4aa" opacity="0.6"/>
+    <circle cx="620" cy="420" r="5"  fill="#6c63ff" opacity="0.6"/>
+
+    <!-- Outer rings on main nodes -->
+    <circle cx="460" cy="240" r="16" stroke="#6c63ff" stroke-width="1" opacity="0.3" fill="none"/>
+    <circle cx="680" cy="300" r="14" stroke="#00d4aa" stroke-width="1" opacity="0.3" fill="none"/>
+  </g>
+
+  <!-- Circuit board square pads -->
+  <g fill="none" stroke="#6c63ff" stroke-width="1" opacity="0.35">
+    <rect x="445" y="225" width="30" height="30" rx="3"/>
+    <rect x="665" y="285" width="30" height="30" rx="3"/>
+    <rect x="335" y="368" width="28" height="24" rx="3"/>
+  </g>
+
+  <!-- Floating data labels -->
+  <g font-family="'Courier New', monospace" font-size="9" fill="#6c63ff" opacity="0.45">
+    <text x="470" y="210">DSP</text>
+    <text x="686" y="276">SSP</text>
+    <text x="326" y="164">GAM</text>
+    <text x="546" y="140">RTB</text>
+    <text x="356" y="360">CTR</text>
+    <text x="506" y="350">CPM</text>
+  </g>
+
+  <!-- Small decorative crosses -->
+  <g stroke="#00d4aa" stroke-width="1" opacity="0.3">
+    <line x1="200" y1="196" x2="200" y2="204"/><line x1="196" y1="200" x2="204" y2="200"/>
+    <line x1="580" y1="476" x2="580" y2="484"/><line x1="576" y1="480" x2="584" y2="480"/>
+    <line x1="100" y1="496" x2="100" y2="504"/><line x1="96"  y1="500" x2="104" y2="500"/>
+    <line x1="720" y1="196" x2="720" y2="204"/><line x1="716" y1="200" x2="724" y2="200"/>
+  </g>
+</svg>

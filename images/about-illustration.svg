@@ -1,0 +1,106 @@
+<!-- images/about-illustration.svg
+     Abstract tech: data analytics / dashboard with bar chart & nodes -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" fill="none">
+  <defs>
+    <linearGradient id="barG1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#6c63ff" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="barG2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#00d4aa"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="barG3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ff9f43"/>
+      <stop offset="100%" stop-color="#ff9f43" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dashboard card background -->
+  <rect x="20" y="20" width="440" height="360" rx="16" fill="#111827" stroke="#1e2a3a" stroke-width="1.5"/>
+
+  <!-- Top bar -->
+  <rect x="20" y="20" width="440" height="48" rx="16" fill="#151e2e"/>
+  <rect x="20" y="52" width="440" height="16" fill="#151e2e"/>
+  <!-- Dot controls -->
+  <circle cx="50" cy="44" r="6" fill="#ff6b6b" opacity="0.7"/>
+  <circle cx="70" cy="44" r="6" fill="#ff9f43" opacity="0.7"/>
+  <circle cx="90" cy="44" r="6" fill="#00d4aa" opacity="0.7"/>
+  <!-- Dashboard title -->
+  <text x="120" y="49" font-family="'Segoe UI', sans-serif" font-size="11" fill="#8892a4">Campaign Performance Dashboard</text>
+
+  <!-- Chart area -->
+  <!-- Grid lines -->
+  <g stroke="#1e2a3a" stroke-width="1">
+    <line x1="60" y1="290" x2="440" y2="290"/>
+    <line x1="60" y1="250" x2="440" y2="250"/>
+    <line x1="60" y1="210" x2="440" y2="210"/>
+    <line x1="60" y1="170" x2="440" y2="170"/>
+    <line x1="60" y1="130" x2="440" y2="130"/>
+  </g>
+  <!-- Y axis labels -->
+  <g font-family="'Courier New', monospace" font-size="8" fill="#8892a4" text-anchor="end">
+    <text x="55" y="293">0</text>
+    <text x="55" y="253">25</text>
+    <text x="55" y="213">50</text>
+    <text x="55" y="173">75</text>
+    <text x="55" y="133">100</text>
+  </g>
+
+  <!-- Bars — Group 1 (CPM) -->
+  <rect x="80"  y="170" width="22" height="120" rx="4" fill="url(#barG1)" filter="url(#glow3)"/>
+  <rect x="150" y="145" width="22" height="145" rx="4" fill="url(#barG1)" filter="url(#glow3)"/>
+  <rect x="220" y="190" width="22" height="100" rx="4" fill="url(#barG1)" filter="url(#glow3)"/>
+  <rect x="290" y="130" width="22" height="160" rx="4" fill="url(#barG1)" filter="url(#glow3)"/>
+  <rect x="360" y="110" width="22" height="180" rx="4" fill="url(#barG1)" filter="url(#glow3)"/>
+
+  <!-- Bars — Group 2 (CTR) -->
+  <rect x="107" y="210" width="22" height="80"  rx="4" fill="url(#barG2)" filter="url(#glow3)"/>
+  <rect x="177" y="195" width="22" height="95"  rx="4" fill="url(#barG2)" filter="url(#glow3)"/>
+  <rect x="247" y="220" width="22" height="70"  rx="4" fill="url(#barG2)" filter="url(#glow3)"/>
+  <rect x="317" y="180" width="22" height="110" rx="4" fill="url(#barG2)" filter="url(#glow3)"/>
+  <rect x="387" y="160" width="22" height="130" rx="4" fill="url(#barG2)" filter="url(#glow3)"/>
+
+  <!-- Trend line over bars -->
+  <polyline
+    points="91,170 161,145 231,188 301,128 371,108"
+    stroke="#ff9f43" stroke-width="2" fill="none" stroke-linejoin="round"
+    filter="url(#glow3)"/>
+  <!-- Trend dots -->
+  <g fill="#ff9f43" filter="url(#glow3)">
+    <circle cx="91"  cy="170" r="4"/>
+    <circle cx="161" cy="145" r="4"/>
+    <circle cx="231" cy="188" r="4"/>
+    <circle cx="301" cy="128" r="4"/>
+    <circle cx="371" cy="108" r="4"/>
+  </g>
+
+  <!-- X axis labels -->
+  <g font-family="'Courier New', monospace" font-size="8" fill="#8892a4" text-anchor="middle">
+    <text x="102"  y="308">Jan</text>
+    <text x="172"  y="308">Feb</text>
+    <text x="242"  y="308">Mar</text>
+    <text x="312"  y="308">Apr</text>
+    <text x="382"  y="308">May</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="'Segoe UI', sans-serif" font-size="9" fill="#8892a4">
+    <rect x="100" y="332" width="10" height="10" rx="2" fill="#6c63ff"/>
+    <text x="115" y="341">CPM</text>
+    <rect x="160" y="332" width="10" height="10" rx="2" fill="#00d4aa"/>
+    <text x="175" y="341">CTR</text>
+    <circle cx="227" cy="337" r="4" fill="#ff9f43"/>
+    <text x="235" y="341">Trend</text>
+  </g>
+
+  <!-- KPI cards top right -->
+  <rect x="310" y="85" width="130" height="38" rx="8" fill="#1a1033" stroke="#6c63ff" stroke-width="1" opacity="0.8"/>
+  <text x="325" y="100" font-family="'Segoe UI', sans-serif" font-size="8" fill="#8892a4">Fill Rate</text>
+  <text x="325" y="115" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" fill="#6c63ff" filter="url(#glow3)">94.7%</text>
+  <text x="390" y="115" font-family="'Segoe UI', sans-serif" font-size="8" fill="#00d4aa">▲ 3.2%</text>
+</svg>

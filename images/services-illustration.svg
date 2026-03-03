@@ -1,0 +1,71 @@
+<!-- images/services-illustration.svg
+     Abstract tech: programmatic ad ecosystem pipeline -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" fill="none">
+  <defs>
+    <linearGradient id="pipe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#6c63ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#00d4aa" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <!-- Pipeline flow line -->
+  <line x1="80" y1="110" x2="820" y2="110" stroke="url(#pipe)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+
+  <!-- Stage nodes -->
+  <g filter="url(#glow2)">
+    <!-- Advertiser -->
+    <rect x="40"  y="80" width="80" height="60" rx="10" fill="#151e2e" stroke="#6c63ff" stroke-width="1.5"/>
+    <!-- DSP -->
+    <rect x="200" y="80" width="80" height="60" rx="10" fill="#151e2e" stroke="#6c63ff" stroke-width="1.5"/>
+    <!-- Ad Exchange -->
+    <rect x="370" y="70" width="100" height="80" rx="10" fill="#1a1033" stroke="#6c63ff" stroke-width="2"/>
+    <!-- SSP -->
+    <rect x="560" y="80" width="80" height="60" rx="10" fill="#151e2e" stroke="#00d4aa" stroke-width="1.5"/>
+    <!-- Publisher -->
+    <rect x="730" y="80" width="80" height="60" rx="10" fill="#151e2e" stroke="#00d4aa" stroke-width="1.5"/>
+  </g>
+
+  <!-- Labels inside boxes -->
+  <g font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+    <text x="80"  y="106" fill="#6c63ff">ADV</text>
+    <text x="80"  y="122" fill="#8892a4" font-size="9" font-weight="400">Advertiser</text>
+    <text x="240" y="106" fill="#6c63ff">DSP</text>
+    <text x="240" y="122" fill="#8892a4" font-size="9" font-weight="400">Demand Side</text>
+    <text x="420" y="105" fill="#a89fff">EXCHANGE</text>
+    <text x="420" y="121" fill="#8892a4" font-size="9" font-weight="400">RTB Auction</text>
+    <text x="600" y="106" fill="#00d4aa">SSP</text>
+    <text x="600" y="122" fill="#8892a4" font-size="9" font-weight="400">Supply Side</text>
+    <text x="770" y="106" fill="#00d4aa">PUB</text>
+    <text x="770" y="122" fill="#8892a4" font-size="9" font-weight="400">Publisher</text>
+  </g>
+
+  <!-- Bid data decorations above/below -->
+  <g font-family="'Courier New', monospace" font-size="8" fill="#6c63ff" opacity="0.5">
+    <text x="175" y="68">bid_req →</text>
+    <text x="340" y="68">auction</text>
+    <text x="510" y="68">win_notice →</text>
+    <text x="690" y="68">ad_render</text>
+    <!-- Below labels -->
+    <text x="155" y="162">floor: $2.40</text>
+    <text x="330" y="162">CPM: $3.80</text>
+    <text x="510" y="162">fill_rate: 94%</text>
+    <text x="690" y="162">CTR: 0.38%</text>
+  </g>
+
+  <!-- Centre exchange pulse rings -->
+  <circle cx="420" cy="110" r="55" stroke="#6c63ff" stroke-width="0.8" opacity="0.2" fill="none"/>
+  <circle cx="420" cy="110" r="44" stroke="#6c63ff" stroke-width="0.8" opacity="0.3" fill="none"/>
+
+  <!-- Corner dots decoration -->
+  <circle cx="20"  cy="20"  r="3" fill="#6c63ff" opacity="0.3"/>
+  <circle cx="880" cy="20"  r="3" fill="#00d4aa" opacity="0.3"/>
+  <circle cx="20"  cy="200" r="3" fill="#00d4aa" opacity="0.3"/>
+  <circle cx="880" cy="200" r="3" fill="#6c63ff" opacity="0.3"/>
+</svg>
