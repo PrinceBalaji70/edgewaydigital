@@ -87,7 +87,7 @@ button {
 }
 .section-sub {
   color: var(--muted);
-  max-width: 560px;
+  max-width: 860px;
   margin-bottom: 3rem;
   font-size: 0.95rem;
 }
@@ -309,7 +309,7 @@ button {
 .hero-sub {
   font-size: 1.1rem;
   color: var(--muted);
-  max-width: 600px;
+  max-width: 800px;
   margin-bottom: 2.5rem;
 }
 .hero-btns {
